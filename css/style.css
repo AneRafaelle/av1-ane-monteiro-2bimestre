@@ -6,6 +6,7 @@ body {
 }
 
 header {
+  position: relative;
   background-color: rgb(142, 191, 236);
   color: rgb(31, 7, 29);
   padding: 20px;
@@ -63,12 +64,44 @@ iframe {
   border-radius: 10px;
 }
 
-table,
-th,
-td {
-  border: 1px solid black;
+table {
+  width: 100%;
+  table-layout: fixed;
   border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid #ccc;
   padding: 10px;
+  text-align: left;
+  vertical-align: top;
+}
+
+/* Cabeçalho */
+th {
+  background-color: #062447;
+  color: azure;
+}
+
+/* Largura das colunas */
+th:nth-child(1),
+td:nth-child(1) {
+  width: 15%;
+}
+
+th:nth-child(2),
+td:nth-child(2) {
+  width: 35%;
+}
+
+th:nth-child(3),
+td:nth-child(3) {
+  width: 25%;
+}
+
+th:nth-child(4),
+td:nth-child(4) {
+  width: 25%;
 }
 
 footer {
@@ -107,4 +140,11 @@ button {
   display: inline-block;
   padding: 10px 20px;
   margin-top: 10px;
+}
+table img {
+  width: 300px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  display: block;
 }
